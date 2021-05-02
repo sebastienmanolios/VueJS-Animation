@@ -1,5 +1,8 @@
 # animating-vue
 
+It's a project developped by live coding with https://www.vuemastery.com/, a nice learning Vuejs website
+
+
 ## Project setup
 ```
 npm install
