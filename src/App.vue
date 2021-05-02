@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Modal</router-link> |
-      <router-link to="/list">List</router-link>
+      <router-link to="/list">List</router-link> |
+      <router-link to="/drawer">Drawer</router-link>
     </div>
     <transition name="slide-fade" mode="out-in">
       <router-view />
@@ -86,7 +87,21 @@ ul {
   opacity: 0;
 }
 
-/*** slide-fade ***/
+.slide-fade-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.2s ease;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
 .slide-up-enter {
   transform: translateY(10px);
   opacity: 0;
@@ -96,9 +111,7 @@ ul {
   transition: all 0.2s ease;
 }
 
-/* /* When sorting the list  */
 .slide-up-move {
-  transition: transform .8s ease-in;
+  transition: transform 0.8s ease-in;
 }
-
 </style>
